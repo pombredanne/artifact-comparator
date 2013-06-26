@@ -8,7 +8,10 @@
  * Contributors:
  *    Sonatype Inc. - initial API and implementation
  *******************************************************************************/
-package org.eclipse.tycho.zipcomparator.internal;
+package io.tesla.zipcomparator.internal;
+
+import io.tesla.artifactcomparator.ArtifactComparator;
+import io.tesla.artifactcomparator.ArtifactDelta;
 
 import java.io.File;
 import java.io.IOException;
@@ -18,8 +21,6 @@ import org.codehaus.plexus.component.annotations.Component;
 import org.codehaus.plexus.component.annotations.Requirement;
 import org.codehaus.plexus.util.FileUtils;
 import org.codehaus.plexus.util.io.RawInputStreamFacade;
-import org.eclipse.tycho.artifactcomparator.ArtifactComparator;
-import org.eclipse.tycho.artifactcomparator.ArtifactDelta;
 
 @Component(role = ContentsComparator.class, hint = NestedZipComparator.TYPE)
 public class NestedZipComparator implements ContentsComparator {

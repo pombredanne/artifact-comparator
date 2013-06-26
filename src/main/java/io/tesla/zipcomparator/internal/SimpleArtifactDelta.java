@@ -8,9 +8,9 @@
  * Contributors:
  *    Sonatype Inc. - initial API and implementation
  *******************************************************************************/
-package org.eclipse.tycho.zipcomparator.internal;
+package io.tesla.zipcomparator.internal;
 
-import org.eclipse.tycho.artifactcomparator.ArtifactDelta;
+import io.tesla.artifactcomparator.ArtifactDelta;
 
 public class SimpleArtifactDelta implements ArtifactDelta {
 

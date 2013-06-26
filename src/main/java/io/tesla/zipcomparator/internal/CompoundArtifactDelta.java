@@ -8,7 +8,9 @@
  * Contributors:
  *    Sonatype Inc. - initial API and implementation
  *******************************************************************************/
-package org.eclipse.tycho.zipcomparator.internal;
+package io.tesla.zipcomparator.internal;
+
+import io.tesla.artifactcomparator.ArtifactDelta;
 
 import java.io.File;
 import java.io.IOException;
@@ -17,7 +19,6 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 import org.codehaus.plexus.util.FileUtils;
-import org.eclipse.tycho.artifactcomparator.ArtifactDelta;
 
 public class CompoundArtifactDelta extends SimpleArtifactDelta {
 

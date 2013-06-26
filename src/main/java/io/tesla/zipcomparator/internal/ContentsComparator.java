@@ -8,22 +8,13 @@
  * Contributors:
  *    Sonatype Inc. - initial API and implementation
  *******************************************************************************/
-package org.eclipse.tycho.artifactcomparator;
+package io.tesla.zipcomparator.internal;
 
+import io.tesla.artifactcomparator.ArtifactDelta;
 
-/**
- * Represents both simple and compound artifact delta.
- */
-public interface ArtifactDelta {
+import java.io.IOException;
+import java.io.InputStream;
 
-    /**
-     * @return description of the delta, never null.
-     */
-    public String getMessage();
-
-    /**
-     * @return detailed description of the delta, never null.
-     */
-    public String getDetailedMessage();
-
+public interface ContentsComparator {
+    public ArtifactDelta getDelta(InputStream baseline, InputStream reactor) throws IOException;
 }

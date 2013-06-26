@@ -8,19 +8,22 @@
  * Contributors:
  *    Sonatype Inc. - initial API and implementation
  *******************************************************************************/
-package org.eclipse.tycho.jarcomparator.testdata;
+package io.tesla.artifactcomparator;
 
-import java.io.IOException;
-import java.util.LinkedHashSet;
-import java.util.Set;
 
-import org.codehaus.plexus.component.annotations.Component;
+/**
+ * Represents both simple and compound artifact delta.
+ */
+public interface ArtifactDelta {
 
-@Component(role = JavaClass.class)
-public class JavaClass {
-    public Set<String> getStrings() throws IOException {
-        return new LinkedHashSet<String>() {
-            private static final long serialVersionUID = 711052831237148688L;
-        };
-    }
+    /**
+     * @return description of the delta, never null.
+     */
+    public String getMessage();
+
+    /**
+     * @return detailed description of the delta, never null.
+     */
+    public String getDetailedMessage();
+
 }

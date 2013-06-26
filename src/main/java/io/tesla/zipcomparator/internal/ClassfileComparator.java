@@ -8,7 +8,9 @@
  * Contributors:
  *    Sonatype Inc. - initial API and implementation
  *******************************************************************************/
-package org.eclipse.tycho.zipcomparator.internal;
+package io.tesla.zipcomparator.internal;
+
+import io.tesla.artifactcomparator.ArtifactDelta;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -22,7 +24,6 @@ import java.util.List;
 
 import org.codehaus.plexus.component.annotations.Component;
 import org.codehaus.plexus.util.IOUtil;
-import org.eclipse.tycho.artifactcomparator.ArtifactDelta;
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.tree.ClassNode;

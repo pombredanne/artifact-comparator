@@ -8,7 +8,7 @@
  * Contributors:
  *    Sonatype Inc. - initial API and implementation
  *******************************************************************************/
-package org.eclipse.tycho.artifactcomparator;
+package io.tesla.artifactcomparator;
 
 import java.io.File;
 import java.io.IOException;

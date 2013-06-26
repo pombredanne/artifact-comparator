@@ -8,17 +8,18 @@
  * Contributors:
  *    Sonatype Inc. - initial API and implementation
  *******************************************************************************/
-package org.eclipse.tycho.jarcomparator.tests;
+package io.tesla.jarcomparator.tests;
+
+import io.tesla.zipcomparator.internal.ClassfileComparator;
+import io.tesla.zipcomparator.internal.ContentsComparator;
+import io.tesla.zipcomparator.internal.ManifestComparator;
+import io.tesla.zipcomparator.internal.PropertiesComparator;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
 
 import org.codehaus.plexus.PlexusTestCase;
 import org.codehaus.plexus.util.IOUtil;
-import org.eclipse.tycho.zipcomparator.internal.ClassfileComparator;
-import org.eclipse.tycho.zipcomparator.internal.ContentsComparator;
-import org.eclipse.tycho.zipcomparator.internal.ManifestComparator;
-import org.eclipse.tycho.zipcomparator.internal.PropertiesComparator;
 import org.junit.Assert;
 
 public class ContentsComparatorTest extends PlexusTestCase {

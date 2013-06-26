@@ -8,14 +8,15 @@
  * Contributors:
  *    Sonatype Inc. - initial API and implementation
  *******************************************************************************/
-package org.eclipse.tycho.zipcomparator.internal;
+package io.tesla.zipcomparator.internal;
+
+import io.tesla.artifactcomparator.ArtifactDelta;
 
 import java.io.IOException;
 import java.io.InputStream;
 
 import org.codehaus.plexus.component.annotations.Component;
 import org.codehaus.plexus.util.IOUtil;
-import org.eclipse.tycho.artifactcomparator.ArtifactDelta;
 
 @Component(role = ContentsComparator.class, hint = DefaultContentsComparator.TYPE)
 public class DefaultContentsComparator implements ContentsComparator {

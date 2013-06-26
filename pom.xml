@@ -14,11 +14,15 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org.eclipse.tycho</groupId>
-    <artifactId>tycho</artifactId>
-    <version>0.19.0-SNAPSHOT</version>
+    <groupId>io.tesla</groupId>
+    <artifactId>tesla</artifactId>
+    <version>4</version>
   </parent>
-  <artifactId>tycho-artifactcomparator</artifactId>
+  <artifactId>artifact-comparator</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <properties>
+    <plexusVersion>1.5.5</plexusVersion>
+  </properties>
 
   <dependencies>
     <dependency>
@@ -30,20 +34,25 @@
     <dependency>
       <groupId>org.codehaus.plexus</groupId>
       <artifactId>plexus-utils</artifactId>
+      <version>3.0.7</version>
     </dependency>
     <dependency>
       <groupId>org.codehaus.plexus</groupId>
       <artifactId>plexus-component-annotations</artifactId>
+      <version>1.5.5</version>
     </dependency>
 
     <dependency>
       <artifactId>junit</artifactId>
       <groupId>junit</groupId>
+      <version>4.11</version>
+      <scope>test</scope>
     </dependency>
-	<dependency>
-		<groupId>org.codehaus.plexus</groupId>
-		<artifactId>plexus-container-default</artifactId>
-	</dependency>
+    <dependency>
+      <groupId>org.codehaus.plexus</groupId>
+      <artifactId>plexus-container-default</artifactId>
+      <version>${plexusVersion}</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -51,6 +60,15 @@
       <plugin>
         <groupId>org.codehaus.plexus</groupId>
         <artifactId>plexus-component-metadata</artifactId>
+        <version>${plexusVersion}</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>generate-metadata</goal>
+              <goal>generate-test-metadata</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>

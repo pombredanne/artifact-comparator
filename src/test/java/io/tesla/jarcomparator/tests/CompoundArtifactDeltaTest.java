@@ -8,16 +8,17 @@
  * Contributors:
  *    Sonatype Inc. - initial API and implementation
  *******************************************************************************/
-package org.eclipse.tycho.jarcomparator.tests;
+package io.tesla.jarcomparator.tests;
+
+import io.tesla.artifactcomparator.ArtifactDelta;
+import io.tesla.zipcomparator.internal.CompoundArtifactDelta;
+import io.tesla.zipcomparator.internal.SimpleArtifactDelta;
 
 import java.util.Map;
 import java.util.TreeMap;
 
 import junit.framework.Assert;
 
-import org.eclipse.tycho.artifactcomparator.ArtifactDelta;
-import org.eclipse.tycho.zipcomparator.internal.CompoundArtifactDelta;
-import org.eclipse.tycho.zipcomparator.internal.SimpleArtifactDelta;
 import org.junit.Test;
 
 public class CompoundArtifactDeltaTest {

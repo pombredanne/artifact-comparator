@@ -8,13 +8,19 @@
  * Contributors:
  *    Sonatype Inc. - initial API and implementation
  *******************************************************************************/
-package org.eclipse.tycho.zipcomparator.internal;
+package io.tesla.jarcomparator.testdata;
 
 import java.io.IOException;
-import java.io.InputStream;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
-import org.eclipse.tycho.artifactcomparator.ArtifactDelta;
+import org.codehaus.plexus.component.annotations.Component;
 
-public interface ContentsComparator {
-    public ArtifactDelta getDelta(InputStream baseline, InputStream reactor) throws IOException;
+@Component(role = JavaClass.class)
+public class JavaClass {
+    public Set<String> getStrings() throws IOException {
+        return new LinkedHashSet<String>() {
+            private static final long serialVersionUID = 711052831237148688L;
+        };
+    }
 }

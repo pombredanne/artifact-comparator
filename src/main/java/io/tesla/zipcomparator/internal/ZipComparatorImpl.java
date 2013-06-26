@@ -8,7 +8,10 @@
  * Contributors:
  *    Sonatype Inc. - initial API and implementation
  *******************************************************************************/
-package org.eclipse.tycho.zipcomparator.internal;
+package io.tesla.zipcomparator.internal;
+
+import io.tesla.artifactcomparator.ArtifactComparator;
+import io.tesla.artifactcomparator.ArtifactDelta;
 
 import java.io.File;
 import java.io.IOException;
@@ -30,8 +33,6 @@ import org.codehaus.plexus.component.annotations.Requirement;
 import org.codehaus.plexus.logging.Logger;
 import org.codehaus.plexus.util.IOUtil;
 import org.codehaus.plexus.util.SelectorUtils;
-import org.eclipse.tycho.artifactcomparator.ArtifactComparator;
-import org.eclipse.tycho.artifactcomparator.ArtifactDelta;
 
 @Component(role = ArtifactComparator.class, hint = ZipComparatorImpl.TYPE)
 public class ZipComparatorImpl implements ArtifactComparator {
